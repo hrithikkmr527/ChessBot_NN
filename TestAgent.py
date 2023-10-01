@@ -226,9 +226,9 @@ def generate_random_sample(agent, stockfish, board):
 board = chess.Board()
 
 stockfish = chess.engine.SimpleEngine.popen_uci(".\stockfish-windows-x86-64-modern\stockfish\stockfish-windows-x86-64-modern.exe")
-agent = ChessBot(input_model_path="Trained_final_bot")
+agent = ChessBot(input_model_path="Trained_final_bot_v2")
 
-for i in range(2000):
+for i in range(5000):
     generate_random_sample(agent, stockfish, board)
 
 agent.learn_experience_replay(debug = True)
@@ -236,7 +236,7 @@ agent.learn_experience_replay(debug = True)
 import matplotlib.pyplot as plt
 
 loss = []
-for i in range(1000):
+for i in range(3000):
     loss.append(agent.learn_experience_replay(debug=False))
 
 plt.plot(loss)
