@@ -42,6 +42,6 @@ For each step the agent takes a random action with probability epsilon and the "
 ## Training the agent (Experience replay)
 
 Experience Replay is a replay memory technique used in reinforcement learning where we store
-the agent’s experiences at each time-step, e<sub>t</sub> = (s~t, a~t, r~t, s~t+1)  in a data-set D = e~t, ..., e~N  , pooled over many episodes into a replay memory.
+the agent’s experiences at each time-step, e<sub>t</sub> = (s<sub>t</sub>, a<sub>t</sub>, r<sub>t<sub>, s<sub>t+1</sub>)  in a data-set D = e<sub>t</sub>, ..., e<sub>N</sub>  , pooled over many episodes into a replay memory.
 We then usually sample the memory randomly for a minibatch of experience, and use this to learn off-policy, as
 with Deep Q-Networks
