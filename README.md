@@ -28,15 +28,10 @@ We will stockfish analyse function to do this.
 
 ## Exploration Strategy
 It is crucial to design the agent with an exploration strategy that will allow it to explore new moves instead of picking always the ones that temporarily thinks as best.
-
 Otherwise, the agent will become stuck in some local minimum instead of getting to the best possible solution.
-
 A simple exploration strategy is called epsilon-greedy.
-
 We have a parameter called epsilon that ranges between 0 and 1 and represent the exploration probability.
-
 At the beginning of the training the epsilon is set to a high value, like 1 and it is progressively reduced.
-
 For each step the agent takes a random action with probability epsilon and the "best move" with probability 1 - epsilon.
 
 ## Training the agent (Experience replay)
